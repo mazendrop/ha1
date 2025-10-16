@@ -90,5 +90,27 @@ class CalculatorTest {
 
 
     //TODO hier weitere Tests erstellen
-}
 
+
+    @Test
+    @DisplayName("should display correct percentage result for a decimal number")
+    void testPercentage() {
+
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(3);
+        calc.pressDigitKey(6);
+        calc.pressDotKey();
+        calc.pressDigitKey(7);
+
+        calc.pressUnaryOperationKey("%");
+
+
+
+        String expected = "0.36700000";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+
+    }
+
+}
