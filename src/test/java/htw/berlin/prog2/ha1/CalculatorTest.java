@@ -115,7 +115,7 @@ class CalculatorTest {
 
 
     @Test
-    @DisplayName("should clear screen after pressing equals and then entering a new number")
+    @DisplayName("should clear screen after pressing equals and then entering a new number but it doesnt")
     void testClearScreenAfterEquals() {
 
         Calculator calc = new Calculator();
@@ -139,7 +139,7 @@ class CalculatorTest {
 
 
     @Test
-    @DisplayName("should display error when inverting zero")
+    @DisplayName("should display error when inverting zero but it shows Infinity")
     void testInverseOfZero() {
 
         Calculator calc = new Calculator();
@@ -154,6 +154,9 @@ class CalculatorTest {
         assertEquals(expected, actual);
 
     }
+
+
+
 
 
 
